@@ -215,6 +215,8 @@ class BuildMac
 
         np.Defines.Add("UIWIDGETS_FORCE_ALIGNAS_8=\\\"1\\\"");
 
+        np.Defines.Add("UIWIDGETS_OS_MAC=\\\"1\\\"");
+
         np.Defines.Add(c => c.CodeGen == CodeGen.Debug,
             new[] { "_ITERATOR_DEBUG_LEVEL=2", "_HAS_ITERATOR_DEBUGGING=1", "_SECURE_SCL=1" });
 
