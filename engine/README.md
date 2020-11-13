@@ -186,3 +186,15 @@ ninja -C ./out/host_debug_unopt/ flutter/fml:fml_lib
 set SKIA_ROOT and FLUTTER_ROOT to your $PATH. SKIA_ROOT is the root folder of your skia repository. FLUTTER_ROOT is the root folder of your flutter engine repository. 
 
 
+Create symbolic as follows. Flutter engine txt include skia header in this pattern 'third_party/skia/*', so without symbolic, the txt lib will include skia
+header file in flutter engine, instead of headers in skia repo.
+
+cmd
+```
+cd <uiwidigets_dir>\engine
+cd third_party   \\ create the directory if not exists
+ln -s <SKIA_ROOT> skia
+```
+
+
+
